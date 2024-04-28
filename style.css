@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    user-select: none;
+}
+
+body{ 
+    background-color: rgb(66, 66, 66);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    position: relative;
+    top: -60px;
+    font-size: 7em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.24);
+    
+}
+
+.points{
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+}
+
+h5{
+    font-size: 2em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.24);
+    
+}
+
+#game{
+    height: 300px;
+    width: 900px;
+    
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px black;
+    background-color: rgb(71, 71, 71);
+    z-index: 3;
+    overflow: hidden;
+}
+
+#character{
+    width: 30px;
+    height: 80px;
+    background-color: rgb(93, 223, 104);
+    border-radius: 10px;
+    position: relative;
+    top: 217px;
+    left: 10px;
+    z-index: 2;
+}
+
+#block{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgb(255, 166, 0);
+    position: relative;
+    top: 178px;
+    left: 854px;
+    z-index: 1;
+    display: none;
+    animation:block linear infinite;
+    animation-duration: 1.5s;
+}
+
+@keyframes block{
+    0%{left: 854px;}
+    100%{left: -40px;}
+}
+
+#restart{
+
+    width: 200px;
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    background-color:  rgb(71, 71, 71);
+    box-shadow: inset 0 0 15px black;
+    position: relative;
+    top: 50px;
+    color: rgba(255, 255, 255, 0.24);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+
+@media (max-width:900px){
+
+    h1{
+        font-size: 2em;
+        top: -40px;
+    }
+
+    #restart{
+
+        width: 90px;
+        height: 40px;
+        top: 30px;
+        font-size: 1em;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.603);
+    }
+
+    .points{
+        width: 370px;
+    }
+    h5{
+        font-size: 1.1em;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.24);
+    }
+    #game{
+        height: 150px;
+        width: 400px;
+        overflow: hidden;
+    }
+
+    #character{
+        width: 15px;
+        height: 40px;
+        border-radius: 5px;
+        position: relative;
+        top: 105px;
+        left: 8px;
+    }
+
+    @keyframes jump{
+        0%{top: 105px;}
+        30%{top: 75px;}
+        70%{top: 75px;}
+        100%{top: 105px;}
+    }
+
+    #block{
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        position: relative;
+        top: 90px;
+        left: 100px;
+    }
+
+    @keyframes block{
+        0%{left: 390px;}
+        100%{left: -10px;}
+    }
+}
+
+@media (max-width:500px){
+
+    h1{
+        font-size: 2em;
+        top: -30px;
+    }
+
+    #restart{
+
+        width: 90px;
+        height: 40px;
+        font-size: 1em;
+        top: 20px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.603);
+    }
+
+    .points{
+        width: 280px;
+    }
+
+    h5{
+        font-size: 0.8em;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.24);
+    }
+    #game{
+        height: 150px;
+        width: 300px;
+        overflow: hidden;
+    }
+
+    #character{
+        width: 15px;
+        height: 40px;
+        border-radius: 5px;
+        position: relative;
+        top: 105px;
+        left: 8px;
+    }
+
+    @keyframes jump{
+        0%{top: 105px;}
+        30%{top: 75px;}
+        70%{top: 75px;}
+        100%{top: 105px;}
+    }
+
+    #block{
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        position: relative;
+        top: 90px;
+        left: 100px;
+    }
+
+    @keyframes block{
+        0%{left: 390px;}
+        100%{left: -10px;}
+    }
+}
